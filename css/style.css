@@ -27,6 +27,9 @@
     outline: none; /* borda ao selecionar um botão ou input */
     scroll-behavior: smooth; /* suavização ao interagir na página */
 }
+
+/* tags semânticas */
+
 html{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -44,8 +47,51 @@ header{
     padding: 1.1rem; /* aumenta herdando da tag pai - 110% */
     background-color: var(--bg-color-01);
     display: flex; /* comportamento dos elementos */
-    justify-content: space-between;
+    justify-content: space-evenly; /* Definir um espaço igual entre os elementos */
     align-items: center; /* alinha no centro na vertical */
-    z-index: 100;
-    border: solid 1px var(--color-02);
+    z-index: 100; /* Sobrepor todas os componentes presentes no site */
+    border: solid 1px var(--color-02);  /* TEST */
+}
+nav a{  /* Mexer somente nos links */
+    font-size: 1.2rem;
+    color: var(--text-color);
+    padding: 0.5rem 1rem; /* Altura de 8px, Largura de 16px */
+    transition: 0.4s;
+
+    border: solid 1px var(--color-02);  /* TEST */
+}
+nav a:hover{
+    color: var(--main-color);
+}
+section{
+    min-height: 100vh; /* Ocupa o maximo da tela para colocar a section */
+    padding: 6rem 6rem 2rem; /* Define uma distância dos cantos dentro da box */
+    
+    border: solid 1px var(--color-02);  /* TEST */
+}
+span{
+    color: var(--main-color);
+}
+
+/* classes */
+
+.logo{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 600; /* Ficar em negrito */
+    cursor: default; /* Por ser texto, ele deixará de trocar o cursor */
+}
+
+.home, .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    /* divide igualmente todos os lados dos elementos, já o between somente entre eles */
+    align-items: center;
+}
+.home-img img, .about-img img{
+    width: 100%;
+}
+.home-content > p {
+    width: 70%;
 }
